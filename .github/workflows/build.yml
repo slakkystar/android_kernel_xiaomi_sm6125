@@ -23,6 +23,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
+    - name: Collect diagnostics
+      run: bash diagnose.sh
+
     - name: Run Build Script
       run: |
         chmod +x build.sh
